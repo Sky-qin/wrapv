@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-  name: 'TestButton' // 注意这个name是必须的
+  name: 'TestButton', // 注意这个name是必须的
 }
 </script>
 

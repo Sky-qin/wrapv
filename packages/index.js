@@ -1,12 +1,12 @@
-import TestButton from "./TestButton"
-import TestTable from "./TestTable"
-import OprationBar from "./OprationBar"
+import TestButton from "./TestButton";
+import OpreationBar from "./OpreationBar";
+import ContentBox from "./ContentBox";
 
 // 所有组件
 const components = [
     TestButton,
-    TestTable,
-    OprationBar
+    OpreationBar,
+    ContentBox
 ];
 
 // 定义 install 方法，接收 Vue 作为参数
