@@ -1,5 +1,5 @@
 <template>
-  <div name="view-box">
+  <div name="view-box" class="view-box">
     <slot/>
   </div>
 </template>
@@ -11,6 +11,6 @@ export default {
 
 <style lang="scss" scoped>
   .view-box {
-    text-align: inherit;
+    text-align: initial;
   }
 </style>
