@@ -43,17 +43,7 @@ export default {
       }
     }
   },
-  methods: {
-    // handleRenderInner() {
-    //   const { label } = this;
-    //   console.log("label",label)
-    //   if (label) {
-    //     return label;
-    //   } else {
-    //     return <slot />
-    //   }
-    // }
-  }
+  methods: {}
 } 
 </script>
 
