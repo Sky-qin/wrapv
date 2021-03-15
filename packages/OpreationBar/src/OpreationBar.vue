@@ -45,10 +45,7 @@ export default {
     },
   },
   computed: {},
-  mounted() {
-    console.log("total", this.total)
-    console.log('type', typeof this.total)
-  },
+  mounted() {},
   methods: {
     handleClick(item) {
       let { key } = item;

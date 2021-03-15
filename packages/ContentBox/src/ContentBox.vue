@@ -22,9 +22,7 @@ export default {
     }
   },
   computed: {},
-  mounted() {
-    console.log("loadingloading", this.loading)
-  },
+  mounted() {},
 };
 </script>
 

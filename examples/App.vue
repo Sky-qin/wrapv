@@ -11,6 +11,15 @@
         <el-table-column prop="name" label="姓名" width="180" />
         <el-table-column prop="address" label="地址" />
       </el-table>
+      <div>
+      <view-box count="4" fontSize="12">
+        <ViewBoxItem title="测试" label="我任何工具的存在都是更高效地解决问题. 页面可视化搭建工具, 用于解决页面生成的效率问题. 可能前端工程师会觉得最有效率的页面生成方式是打代码, 但有搭建页面" />
+        <ViewBoxItem title="测试" label="啊实打实打算啊撒打算" />
+        <ViewBoxItem title="测试" label="2022020" />
+        <ViewBoxItem title="测试" label="2022020" />
+        <ViewBoxItem title="测试" label="2022020" />
+      </view-box>
+      </div>
     </content-box>
 </template>
 
