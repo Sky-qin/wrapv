@@ -1,58 +1,67 @@
 <template>
   <div class="opreation-bar">
-    <div class="opreation-bar-left" >
+    <div class="opreation-bar-left">
+      <slot/>
       <el-button
-        v-for="item in buttonList" 
-        :key="item.key" 
+        v-for="item in buttonList"
+        :key="item.key"
         :type="item.btType || `primary`"
         :size="item.size || `small`"
         :icon="item.icon || ''"
         @click="handleClick(item)"
       >
-        {{item.label}}
+        {{ item.label }}
       </el-button>
     </div>
     <div class="opreation-bar-right">
       <el-button
-        v-for="item in linkList" 
-        :key="item.key" 
+        v-for="item in linkList"
+        :key="item.key"
         :type="item.btType || `text`"
         :size="item.size || `small`"
         :icon="item.icon || ''"
         @click="handleClick(item)"
       >
-        {{item.label}}
+        {{ item.label }}
       </el-button>
-      <span v-if="total !== false" class="total-count">共 {{parseInt(total) || 0}} 条</span>
+      <span v-if="total !== false" class="total-count"
+        >共 {{ parseInt(total) || 0 }} 条</span
+      >
     </div>
   </div>
 </template>
 <script>
 /* eslint-disable */
 export default {
-  name: 'OpreationBar', // 注意这个name是必须的,
+  name: "OpreationBar", // 注意这个name是必须的,
   props: {
     buttonList: {
       type: Array,
-      default: () => [] 
+      default: () => [],
     },
     linkList: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     total: {
-      default: false
+      default: false,
+    },
+    custom: {
+      type: String,
+      default: "",
     },
   },
   computed: {},
-  mounted() {},
+  mounted() {
+    console.log("slot", this)
+  },
   methods: {
     handleClick(item) {
       let { key } = item;
-      this.$emit('click', key, item);
-    }
-  }
-} 
+      this.$emit("click", key, item);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -66,6 +75,11 @@ export default {
     flex: 1;
     text-align: left;
   }
+
+   &-left > div{
+     margin-right: 10px;
+     width: 200px;
+   }
   &-right {
     flex: 1;
     text-align: right;
